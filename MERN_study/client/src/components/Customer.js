@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 class Customer extends React.Component {
 
-    remove() {
-        fetch('/api/customers_delete/' + this.props.id);
+    async remove() {
+        await fetch('/api/customers_delete/' + this.props.id);
         window.location.href="http://localhost:3000/";
     }
 
