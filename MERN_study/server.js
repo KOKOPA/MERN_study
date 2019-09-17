@@ -17,6 +17,6 @@ mongoose.connect('mongodb://localhost/mongodb_tutorial');
 
 const Customer = require('./models/customer');
 
-const router = require('./routes')(app, Customer);
+require('./routes')(app, Customer);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
